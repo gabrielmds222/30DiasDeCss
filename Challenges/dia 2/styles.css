@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: blue;
+
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    overflow: hidden;
+}
+
+.transition {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background: blueviolet;
+    color: blue;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    border-right: 2px solid #262626;
+}
+
+.slide {
+    position: absolute;
+    top: 50%;
+    line-height: 220px;
+    white-space: nowrap;
+    font-family: "arial black";
+    font-size: 100px;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(0, -50%)
+    }
+
+    100% {
+        transform: translate(-50%, -50%)
+    }
+}
