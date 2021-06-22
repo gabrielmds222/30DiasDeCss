@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #27282D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-icon {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-icon .icons {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    background-color: #E0E0E0;
+    border-radius: 10px;
+}
+
+.main-icon .icons span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s, opacity .7s, background-color .7s, color .7s;
+    display: flex;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #616161;
+    border-radius: 10px;
+   
+}
+
+
+/* Animação em camadas*/
+
+
+.icons:hover span {
+    box-shadow: -1px 1px 1px rgba(0,0,0,.1);
+}
+
+.icons:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+
+.icons:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+
+
+.icons:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+
+
+.icons:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+
+
+.icons:hover span:nth-child(1) {
+    transform: translate(0, 0);
+    opacity: 0.2;
+}
+
+.icons:hover span:nth-child(5) {
+    color: #fff;
+}
+
+
+/* Cores dos Ícones */
+
+
+.facebook:hover span {
+    background: #3b5999;
+}
+
+.whatsapp:hover span {
+    background: #4AC959;
+}
+
+.github:hover span {
+    background: #dd4b39;
+}
+
+.instagram:hover span {
+    background: #E1306C;
+}
+
+.linkedin:hover span{
+    background: #2867B2;
+}
+
+.youtube:hover span{
+    background: #b8130e;
+}
