@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #27282D;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pulse {
+    /* Tamanho do círculo */
+    width: 150px;
+    height: 150px;
+
+    /* Estilização */
+    color: azure;
+    background: rgb(138, 43, 226);
+    border-radius: 50%;
+    line-height: 150px;
+
+    /* Estilização do texto */
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.pulse:hover {
+    animation: pulse 1.7s linear infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.6);
+      }
+    
+      100% {
+        box-shadow: 0 0 0 45px rgba(53, 170, 242, 0);
+      }
+}
