@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #27282D;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    width: 200px;
+    height: 60px;
+    border: 3px solid; 
+    background: none; 
+    color: blueviolet; 
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.btn::before,
+.btn::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 4px;
+    background: #27282D;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+
+.btn::before {
+    top: -4px;
+    left: 10%;
+}
+
+.btn::after {
+    bottom: -4px;
+    right: 10%;
+}
+
+.btn:hover:before {
+    left: 80%;
+}
+
+.btn:hover:after {
+    right: 80%;
+}
+
+
