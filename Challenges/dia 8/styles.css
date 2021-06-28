@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #27282D;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding: 20px 55px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: none;
+    transition: box-shadow .3s;
+}
+
+/* Botão um */
+
+button:nth-child(1) {
+    color: #000;
+    border: 4px solid #000;
+    border-radius: 10px;
+}
+
+
+button:hover:nth-child(1) {
+    border: 4px solid #f1b;
+    border-radius: 10px;
+    color: #f1b;
+    box-shadow: 0 0 35px #f1b, 0 0 35px #f1b;
+    transition: 1s;
+}
+
+/* Botão dois */
+
+button:nth-child(2) {
+    color: #ff2151;
+    border: #ff2151 4px solid;
+    border-radius: 10px;
+    box-shadow: inset 0 0 32px 0 #ff2151, 0 0 32px 0 #ff2151;
+    text-shadow: 0 0 8px hsl(0 0% 100% / 0.3) 0 0 32px currentColor;
+}
+
+ button:hover:nth-child(2) {
+    color: #000;
+    background:#ff2151;
+    text-shadow: none;
+    transition: .8s
+}
+
+/* Botão três */
+
+button:nth-child(3) {
+    color: blue;
+    border: none;
+}
+
+button:hover:nth-child(3) {
+    background: blue;
+    color: #000;
+    box-shadow: 0 0 50px blue;
+    border-radius: 10px;
+    transition: .7s;
+}
