@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:lightcoral;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-decoration: 1px solid #000;
+}
+
+h1 span {
+    color: purple;
+    margin-left: 8px;
+}
+
+span::after {
+    content: '🛏️';
+    animation: icons 3s infinite;
+}
+
+@keyframes icons {
+    0% {
+        content: '🛏️';
+    }
+
+    33% {
+        content: '💻';
+    }
+
+    66% {
+        content: 'coding';
+    }
+/* 
+    75% {
+        content: 'Javascript';
+    }
+
+    100% {
+        content: '🍕';
+    } */
+}
+
