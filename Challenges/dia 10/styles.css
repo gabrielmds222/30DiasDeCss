@@ -1,0 +1,119 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #27282D;
+
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding: 20px 55px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Botão 1 */
+
+.one {
+    background: rgb(255, 38, 0);
+    border-radius: 10px;
+    border: none;
+}
+
+.one:hover {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+/* Botão 2 */
+
+.two {
+    color: white;
+    border: 2px solid #5fe36a;
+}
+
+.two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #5fe36a;
+    transition: all 1.2s ease;
+    z-index: -1;
+}
+
+.two:hover::before {
+    height: 100%;
+}
+
+
+/* Botão 3 */
+
+
+.three {
+    background: blue;
+    border-radius: 10px;
+    border: none;
+}
+
+.three:hover {
+    animation: rotation 1s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
