@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.behind {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to top, rgba(2,0,.6,1) 0%,  rgba(255, 153, 1, 1) 5%, rgba(255, 245, 0, 1) 85%);
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin: 0;
+}
+
+.triangles div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+}
+
+.triangles div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: move 10s linear infinite;
+}
+
+.triangles div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: move 7s linear infinite;
+}
+
+.triangles div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: move 9s linear infinite;
+}
+
+.triangles div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: move 10s linear infinite;
+}
+
+.triangles div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: move 6s linear infinite;
+}
+
+.triangles div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: move 12s linear infinite;
+}
+
+.triangles div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: move 15s linear infinite;
+}
+
+.triangles div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: move 16s linear infinite;
+}
+
+.triangles div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: move 9s linear infinite;
+}
+
+.triangles div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: move 5s linear infinite;
+}
+
+.triangles div:nth-child(11) {
+    top: 50%;
+    left: 65%;
+    animation: move 8s linear infinite;
+}
+
+.triangles div:nth-child(12) {
+    top: 70%;
+    left: 35%;
+    animation: move 11s linear infinite;
+}
+
+.triangles div:nth-child(13) {
+    top: 80%;
+    left: 90%;
+    animation: move 4s linear infinite;
+}
+
+@keyframes move {
+    /* 0% {
+        transform: scale(0) translatey(0) rotate(0);
+        border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+        opacity: 3;
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+        opacity: 0;
+    } */
+
+    0% {
+        opacity: 4;
+        transform: translateY(0);
+        border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+      }
+    
+      33% {
+        opacity: 2;
+        transform: translateY(-50px);
+        border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+      }
+
+      66% {
+        opacity: 0;
+        transform: translate(-100px);
+        border-bottom: 60px solid rgba(255, 255, 255, 0.8);
+      }
+}
