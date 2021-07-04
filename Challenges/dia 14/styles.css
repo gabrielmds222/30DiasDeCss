@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(223, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.one {
+    background-image: url('https://c1.wallpaperflare.com/preview/308/770/431/sky-cloud-air-blue-sky-background-thumbnail.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 10s linear infinite;
+
+    font-size: 100px;
+    padding-bottom: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.two {
+    background: linear-gradient(to right, rgba(2, 0, .6, 1)0%, rgba(9, 9, 121, 1) 10%, rgba(0, 212, 255, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* .two {
+
+} */
