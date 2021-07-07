@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 10%,#90e6ff 20%, #40d4ff 40%, #00c6ff 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 1), 0 0 35px rgba(255, 255, 255, 1);
+    animation: squareToCircle 4s 3s infinite
+                cubic-bezier(1, .015, .299, 1.225);
+}
+
+@keyframes squareToCircle{
+    0% {
+        transform: rotate(0deg);
+        border-radius: 0;
+        background: #ff0000;
+    }
+
+    10% {
+        transform: rotate(45deg);
+        border-radius: 50% 0 0 0;
+        background: #ff7f00;
+    }
+
+    20% {
+        transform: rotate(90deg);
+        border-radius: 50% 50% 0 0;
+        background: #ffff00;
+    }
+
+    30% {
+        transform: rotate(135deg);
+        border-radius: 50% 50% 50% 0;
+        background: #00ff00;
+    }
+
+    40% {
+        transform: rotate(180deg);
+        border-radius: 50%;
+        background: #00ffff;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        border-radius: 50%;
+        background: #0000ff;
+    }
+
+    60% {
+        transform: rotate(45deg);
+        border-radius: 50% 50% 50% 0;
+        background: #8b00ff;
+    }
+
+    70% {
+        transform: rotate(90deg);
+        border-radius: 50% 50% 0 0;
+        background: #ff0000;
+    }
+
+    80% {
+        transform: rotate(135deg);
+        border-radius: 50% 0 0 0;
+        background: #ff7f00;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        border-radius: 0;
+        background: #ffff00;
+    }
+}
