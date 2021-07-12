@@ -1,0 +1,170 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+body {
+    background: #27282D;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin: 0;
+}
+
+.lightsaber {
+    margin-bottom: 4em;
+}
+
+
+/* lightsaber vermelho */
+
+.top,
+.mid,
+.bottom {
+    background: linear-gradient(90deg, #1f1f1f 0%, #1c1c1c 50%, #4a4a4a 60%, #1c1c1c 70%, #1f1f1f 100%);
+    margin: 0 auto;
+    border: #333 1px solid;
+}
+
+.top {
+    height: 48px;
+    width: 32px;
+    position: relative;
+}
+
+.top::before,
+.top::after {
+    content: '';
+    background: linear-gradient(90deg, #1f1f1f 0%, #505050 30%, #8c8c8c 50%, #505050 70%, #1f1f1f 100%);
+    position: absolute;
+    top: 10%;
+    width: 48px;
+    height: 18px;
+    z-index: -1;
+}
+
+.top::before {
+    left: -40px;
+    transform: skew(-25deg);
+}
+
+.top::after {
+    right: -40px;
+    transform: skew(25deg);
+}
+
+.mid {
+    width: 25px;
+    height: 48px;
+}
+
+.bottom {
+    height: 48px;
+    width: 32px;
+    background: linear-gradient(90deg, #1f1f1f 0%, #505050 30%, #8c8c8c 50%, #505050 70%, #1f1f1f 100%);
+}
+
+.saber {
+    height: 0;
+    width: 18px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 48px 48px 0 0 ;;
+    position: relative;
+    transition: 0.5s;
+}
+
+.saber:before {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 8px;
+    border-radius: 48px;
+    z-index: -1;
+    transition: 0.5s;
+    background: inherit;
+}
+
+.lightsaber:hover .saber {
+    height: 250px;
+    box-shadow: 0 -10px 30px 10px red;
+    border: 2px solid red;
+}
+
+.lightsaber:hover .saber:before {
+    width: 200px;
+    height: 10px;
+    box-shadow: 0 0 20px 5px red;
+    border: 2px solid red;
+}
+
+.lightsaber:hover::before {
+    opacity: 1;
+}
+
+
+/* light saber verde */
+
+.top-2,
+.mid-2,
+.bottom-2 {
+    background: linear-gradient(90deg, #1f1f1f 0%, #505050 30%, #8c8c8c 50%, #505050 70%, #1f1f1f 100%);
+    margin: 0 auto;
+    border: #333 1px solid;
+}
+
+.top-2 {
+    height: 48px;
+    width: 25px;
+    position: relative;
+}
+
+.mid-2 {
+    width: 25px;
+    height: 48px;
+}
+
+.bottom-2 {
+    height: 48px;
+    width: 32px;
+}
+
+.saber-2 {
+    height: 0;
+    width: 18px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 48px 48px 0 0 ;;
+    position: relative;
+    transition: 0.5s;
+}
+
+.saber-2:before {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 8px;
+    border-radius: 48px;
+    z-index: -1;
+    transition: 0.5s;
+    background: inherit;
+}
+
+.lightsaber:hover .saber-2 {
+    height: 250px;
+    box-shadow: 0 -10px 30px 10px lime;
+    border: 2px solid lime;
+}
+
+.lightsaber:hover::before {
+    opacity: 1;
+}
