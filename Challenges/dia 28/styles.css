@@ -1,0 +1,130 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #27282D;
+    transition: .5s;
+}
+
+#change {
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 160px;
+    border-radius: 160px;
+    background: #222;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.05),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#change .indicador {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(to bottom, #444, #222);
+    transform: scale(.9);
+    transition: .5s;
+    border-radius: 50%;
+    box-shadow:  0px 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+}
+
+#change.activate .indicador {
+    left: 160px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+  
+  main {
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main.light-mode {
+    background: #dde1e7;
+  }
+  
+  main.dark-mode {
+    background: #27282D;
+  }
+  
+  .switch {
+    position: relative;
+  
+    width: 130px;
+    height: 70px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+    border-radius: 70px;
+    background: #dde1e7;
+    box-shadow: inset -3px -3px 7px #ffffff73, 
+                inset 3px 3px 5px rgba(94, 104, 121, .288);
+    cursor: pointer;
+    transition: .5s;
+  }
+  
+  .slider::before {
+    content: "";
+  
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  
+    width: 50px;
+    height: 50px;
+  
+    background: linear-gradient(to bottom, #999, #fff);
+    box-shadow:  0px 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: .5s ease;
+  }
+  
+  input:checked + .slider {
+    background: #27282D;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.05),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  input:checked + .slider::before {
+    background: linear-gradient(to bottom, #444, #222);
+    box-shadow:  0px 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+  
+    transform: translateX(60px);
+  }
