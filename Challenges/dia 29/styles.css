@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #27282D;
+}
+
+.list {
+    position: relative;
+    background: none;
+    border: 2px solid lime;
+    width: 400px;
+    height: 400px;
+}
+
+.list h2 {
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 600px;
+}
+
+.list ul {
+    position: relative;
+    padding: 20px;
+}
+
+.list ul li {
+    position: relative;
+    padding: 15px 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list ul li:last-child {
+    border-bottom: none;
+}
+
+.list ul li label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.list ul li label input[type="checkbox"] {
+    visibility: hidden;
+    appearance: none;
+}
+
+.list ul li label p {
+    position: absolute;
+    color: linen;
+    transition: 1s;
+}
+
+.list ul li label span {
+    position: relative; 
+    width: 20px;
+    height: 20px;
+    border: 1px solid lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list ul li label span:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    
+}
+
+.list ul li label input[type="checkbox"]:checked ~ p {
+    text-decoration: line-through;
+    color: lime;
+}
+
+.list ul li label input[type="checkbox"]:checked ~ span {
+    border: 1px solid lime;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.list ul li label input[type="checkbox"]:checked ~ span:before {
+    border-left: 2px solid lime;
+    border-bottom: 2px solid lime;
+    transform: rotate(-40deg);
+    transition: .5s;
+}
+
+.add {
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.list input[type="text"] {
+  flex: 2;
+  height: 40px;
+  background: none;
+  color: lime;
+  border: 1px solid lime;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: 0 5px;
+}
+
+button {
+	background-color: chartreuse;
+	height: 40px;
+	padding: 0 15px;
+    margin: 0 5px;
+    flex: 1;
+	border-radius: 5px;
+	width: 100%;
+    justify-content: flex-end;
+	font-size: 16px;
+	color: #444;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	transition: all 0.5s ease;
+}
+
+button:hover {
+	background-color: #444;
+	color: chartreuse;
+}
